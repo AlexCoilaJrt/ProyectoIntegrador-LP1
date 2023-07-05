@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de Datos</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Registro de Datos</h1>
+    <form action="/postular" method="POST">
+      <div class="mb-3">
+        <label for="eg_nombre" class="form-label">Nombre:</label>
+        <input type="text" class="form-control" id="eg_nombre" name="eg_nombre" required>
+      </div>
+      <div class="mb-3">
+        <label for="eg_paterno" class="form-label">Apellido Paterno:</label>
+        <input type="text" class="form-control" id="eg_paterno" name="eg_paterno" required>
+      </div>
+      <div class="mb-3">
+        <label for="eg_materno" class="form-label">Apellido Materno:</label>
+        <input type="text" class="form-control" id="eg_materno" name="eg_materno" required>
+      </div>
+      <div class="mb-3">
+        <label for="eg_fecha_nacimiento" class="form-label">Fecha de nacimiento:</label>
+        <input type="text" class="form-control" id="eg_fecha_nacimiento" name="eg_fecha_nacimiento">
+      </div>
+      <div class="mb-3">
+        <label for="eg_genero" class="form-label">Género:</label>
+        <input type="text" class="form-control" id="eg_genero" name="eg_genero" required>
+      </div>
+      <div class="mb-3">
+        <label for="eg_carrera" class="form-label">Carrera:</label>
+        <input type="text" class="form-control" id="eg_carrera" name="eg_carrera" required>
+      </div>
+      <div class="mb-3">
+        <label for="exp_lab_cargo" class="form-label">Experiencia Laboral:</label>
+        <input type="text" class="form-control" id="exp_lab_cargo" name="exp_lab_cargo" required>
+      </div>
+      <div class="mb-3">
+        <label for="exp_lab_anios" class="form-label">Años de Experiencia Laboral:</label>
+        <input type="number" class="form-control" id="exp_lab_anios" name="exp_lab_anios" required>
+      </div>
+      <!-- Agrega más campos según tus necesidades -->
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

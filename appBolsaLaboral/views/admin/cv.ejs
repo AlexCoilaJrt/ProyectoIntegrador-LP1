@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+
+<html>
+  <script src="jsPDF/jspdf.min.js">
+    import jsPDF from 'jspdf';
+// Obtén una referencia al botón
+const btnGuardarCV = document.getElementById('btnGuardarCV');
+
+// Agrega un evento de clic al botón
+btnGuardarCV.addEventListener('click', () => {
+  // Crea un nuevo objeto jsPDF
+  const doc = new jsPDF();
+
+  // Agrega el contenido al PDF
+  doc.text('Contenido del CV', 10, 10);
+
+  // Descarga el archivo PDF
+  doc.save('CV.pdf');
+});
+  </script>
+<head>
+ 
+
+  <title>Crear CV</title>
+  <style>
+    /* Estilos para el formulario */
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    button[type="submit"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Crear CV</h1>
+
+  <form action="guardar_cv.php" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="text" id="correo" name="correo" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono" required>
+
+    <label for="experiencia">Experiencia laboral:</label>
+    <textarea id="experiencia" name="experiencia"></textarea>
+   
+    <button type="submit">Guardar CV</button>
+  </form>
+</body>
+</html>
